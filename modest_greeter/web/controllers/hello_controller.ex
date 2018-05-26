@@ -1,8 +1,8 @@
 defmodule ModestGreeter.HelloController do
   use ModestGreeter.Web, :controller
 
-  def show(conn, _params) do
-    render conn, "show.html"
+  def show(conn, params) do
+    render conn, "show.html", name: params["name"] || "world"
   end
 end
   
